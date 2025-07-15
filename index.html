@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Emergency roadside help in Birmingham. We offer fast service for tire changes, jumpstarts, fuel delivery, lockouts, and light-duty towing."/>
+  <title>Bham Roadside Help</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6XAxFSYzCkeTNakm4m9Oog9xqp0LeeTk&libraries=places" defer></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Bham Roadside Help</h1>
+    <p>Emergency Roadside Help: Tire Change, Jumpstart, Unlock, Towing & More</p>
+    <a class="call-now" href="tel:2053789045">📞 Call Now: (205) 378-9045</a>
+  </header>
+
+  <div class="hero">
+    <h2>Get a Quote</h2>
+    <p>Use the form below to see your personalized quote.</p>
+  </div>
+
+  <main>
+    <section class="info">
+      <h2>Our Services</h2>
+      <ul>
+        <li><strong>Tire Change</strong> – Flat tire? We'll come to you and get you rolling again.</li>
+        <li><strong>Jumpstart</strong> – Dead battery? Our techs will jump you quickly anywhere in town.</li>
+        <li><strong>Fuel Delivery</strong> – Out of gas? We’ll deliver fuel directly to your vehicle.</li>
+        <li><strong>Car Unlock</strong> – Locked out? We’ll safely unlock your car fast.</li>
+        <li><strong>Towing</strong> – Need a tow? Get a quote based on your pickup/dropoff location.</li>
+      </ul>
+    </section>
+
+    <section class="service-form" id="form">
+      <h2>Quote Calculator</h2>
+      <label for="pickup">Pickup Address:</label>
+      <input id="pickup" type="text" placeholder="Enter your pickup location" />
+      <button onclick="autoFillPickup()">📍 Auto-Fill My Location</button>
+
+      <div id="dropoff-container" class="hidden">
+        <label for="dropoff">Drop-Off Address (Towing only):</label>
+        <input id="dropoff" type="text" placeholder="Enter drop-off address" />
+      </div>
+
+      <label for="service">Select Service:</label>
+      <select id="service" onchange="toggleDropoff(); showQuote();">
+        <option value="">-- Select a Service --</option>
+        <option value="tire">Tire Change</option>
+        <option value="jumpstart">Jumpstart</option>
+        <option value="fuel">Fuel Delivery</option>
+        <option value="unlock">Car Unlock</option>
+        <option value="tow">Towing</option>
+      </select>
+
+      <div id="map"></div>
+      <div id="quote" class="hidden"></div>
+    </section>
+
+    <section class="testimonials">
+      <h2>Customer Testimonials</h2>
+      <blockquote>"They showed up in Avondale within 15 minutes and got my flat tire changed fast!" – Kevin R.</blockquote>
+      <blockquote>"Locked my keys in the car in Hoover and they had me back in no time. Very professional!" – Alicia B.</blockquote>
+      <blockquote>"Ran out of gas on Lakeshore Parkway. These guys came through quickly." – Marcus J.</blockquote>
+      <blockquote>"Had a dead battery in Homewood. Bham Roadside Help was there fast and friendly!" – Jasmine T.</blockquote>
+    </section>
+
+    <section class="info">
+      <h2>Contact Us</h2>
+      <p>📞 Phone: <a href="tel:2053789045">(205) 378-9045</a></p>
+      <p>📧 Email: <a href="mailto:help@birminghamroadside.com">help@birminghamroadside.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Birmingham Roadside Help. All rights reserved.</p>
+  </footer>
+
+  <!-- Tawk.to Chat -->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68758e157f202b19181eab72/1j05j61hs';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+</body>
+</html>
